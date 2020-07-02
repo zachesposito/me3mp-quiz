@@ -1,29 +1,48 @@
-import React, { Component } from 'react'
-import QuizQuestionButton from './QuizQuestionButton'
+import React from 'react';
+import PropTypes from 'prop-types';
+import QuizQuestionButton from './QuizQuestionButton';
 
-class QuizQuestion extends Component {
+class QuizQuestion extends React.PureComponent {
+  static propTypes = {
+    question: PropTypes.shape({
+      instructions: PropTypes.string,
+      choices: PropTypes.arrayOf(PropTypes.string),
+      answer: PropTypes.string
+    }).isRequired,
+    showNextQuestionHandler: PropTypes.func.isRequired
+  };
+
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { incorrectAnswer: false }
+    this.state = { incorrectAnswer: false };
   }
-  handleClick(text) {
-    if (text === this.props.question.answer) {
-      this.setState({ incorrectAnswer: false })
-      this.props.showNextQuestionHandler()
+  submitAnswer(choice) {
+    const { 
+      question,
+      showNextQuestionHandler
+    } = this.props;
+    if (choice === question.answer) {
+      this.setState({ incorrectAnswer: false });
+      showNextQuestionHandler();
     } else {
-      this.setState({ incorrectAnswer: true })
+      this.setState({ incorrectAnswer: true });
     }
   }
   render() {
+    const {
+      question,
+      showNextQuestionHandler: _showNextQuestionHandler,
+      ...rest
+    } = this.props;
     return (
-      <main>
+      <main {...rest}>
         <section>
-          <p>{this.props.question.instructions}</p>
+          <p>{question.instructions}</p>
         </section>
         <section className="buttons">
-          <ul>{this.props.question.choices.map((choice, index) => {
-            return <QuizQuestionButton text={choice} key={index} clickHandler={this.handleClick.bind(this)} />
+          <ul>{question.choices.map((choice, index) => {
+            return <QuizQuestionButton onClick={() => this.submitAnswer(choice)} >{choice}</QuizQuestionButton>
           })}
           </ul>
         </section>

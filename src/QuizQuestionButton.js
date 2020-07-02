@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class QuizQuestionButton extends Component {
-  handleClick() {
-    this.props.clickHandler(this.props.text)
-  }
-  render() {
-    return (
-      <li><button onClick={this.handleClick.bind(this)}>{this.props.text}</button></li>
-    )
-  }
-}
+const QuizQuestionButton = props => <li><button {...props} /></li>;
 
-export default QuizQuestionButton 
+QuizQuestionButton.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default QuizQuestionButton;

@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class QuizEnd extends Component {
-  handleResetClick() {
-    this.props.resetClickHandler()
-  }
-  render() {
-    return (
-      <div>
-        <p>Thanks for playing!</p>
-        <button onClick={this.handleResetClick.bind(this)} href=''>Reset Quiz</button>
-      </div>                
-    )
-  }
-}
+const QuizEnd = props => (
+  <div>
+    <p>Thanks for playing!</p>
+    <button onClick={props.resetQuiz} href=''>Reset Quiz</button>
+  </div>                
+)
 
-export default QuizEnd
+QuizEnd.propTypes = {
+  resetQuiz: PropTypes.func.isRequired
+};
+
+export default QuizEnd;
