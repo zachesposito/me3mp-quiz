@@ -2,15 +2,89 @@
   "questions": [
     {
       "id": 1,
-      "instructions": "hello",
-      "choices": ["hi", "hey"],
-      "answer": "hi"
+      "instructions": "What's the advantage of fighting a Banshee on a ramp?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "Banshee feet have no grip so she can't climb it"
+        },
+        {
+          "id": 2,
+          "label": "If you are higher or lower than her, she can't hit you with her ranged attack"
+        },
+        {
+          "id": 3,
+          "label": "If you are higher or lower than her, she can't sync-kill you"
+        },
+        {
+          "id": 4,
+          "label": "Banshees can go up ramps but not down"
+        }
+      ],
+      "answer": 3,
+      "explanation": "Enemies with the ability to sync-kill can only lock on to targets that are at the same altitude."
     },
     {
       "id": 2,
-      "instructions": "yo",
-      "choices": ["yip", "yop"],
-      "answer": "yop"
+      "instructions": "What happens if you put a Heavy Barrel mod on a Carnifex?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "It has no effect"
+        },
+        {
+          "id": 2,
+          "label": "It adds the extra weight but does not increase damage"
+        },
+        {
+          "id": 3,
+          "label": "It increases damage but does not add the extra weight"
+        },
+        {
+          "id": 4,
+          "label": "It increases damage and adds the extra weight"
+        }
+      ],
+      "answer": 3,
+      "explanation": "The mods that add extra weight only do so on DLC weapons, so on non-DLC weapons like the Carnifex you can get the extra bonuses on these mods \"for free\"."
+    },
+    {
+      "id": 3,
+      "instructions": "Which of these is the most optimal way to reload-cancel?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "Light melee"
+        },
+        {
+          "id": 2,
+          "label": "Dodging"
+        },
+        {
+          "id": 3,
+          "label": "Entering or leaving cover"
+        },
+        {
+          "id": 4,
+          "label": "Attempting to use medigel when not downed"
+        }
+      ],
+      "answer": 4,
+      "explanation": "The other methods listed might be better in certain situations but they all take time to perform, while pushing the medigel button when not downed immediately cancels the reload animation."
+    },
+    {
+      "id": 4,
+      "instructions": "What happens if you apply multiple instances of incendiary ammo's damage-over-time effect to an enemy?",
+      "choices": [
+        {
+    
+        {
+          "id": 4,
+          "label": ""
+        }
+      ],
+      "answer": 4,
+      "explanation": ""
     }
   ]
 }
