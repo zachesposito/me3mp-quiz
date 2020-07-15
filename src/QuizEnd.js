@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const QuizEnd = props => (
   <div>
-    <p>Thanks for playing!</p>
+    <p>Your score: {props.finalScore}</p>
     <button onClick={props.resetQuiz} href=''>Reset Quiz</button>
   </div>                
 )

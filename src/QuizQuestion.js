@@ -12,7 +12,8 @@ class QuizQuestion extends React.PureComponent {
         label: PropTypes.string
       })
     }).isRequired,
-    showNextQuestionHandler: PropTypes.func.isRequired
+    showNextQuestionHandler: PropTypes.func.isRequired,
+    incrementScoreHandler: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -23,10 +24,12 @@ class QuizQuestion extends React.PureComponent {
   submitAnswer(choiceId) {
     const { 
       question,
-      showNextQuestionHandler
+      showNextQuestionHandler,
+      incrementScoreHandler,
     } = this.props;
     if (choiceId === question.answer) {
       this.setState({ incorrectAnswer: false });
+      incrementScoreHandler();
       showNextQuestionHandler();
     } else {
       this.setState({ incorrectAnswer: true });
@@ -41,7 +44,7 @@ class QuizQuestion extends React.PureComponent {
     return (
       <main {...rest}>
         <section>
-          <p>{question.instructions}</p>
+          <h3>{question.instructions}</h3>
         </section>
         <section className="buttons">
           <ul>{question.choices.map((choice, index) => {
