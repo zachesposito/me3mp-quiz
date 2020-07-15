@@ -74,17 +74,167 @@
     },
     {
       "id": 4,
-      "instructions": "What happens if you apply multiple instances of incendiary ammo's damage-over-time effect to an enemy?",
+      "instructions": "Say an enemy is afflicted by a damage-over-time effect (DOT) from incendiary ammo dealing 50 damage each second for 3 seconds. After 1 second you shoot them again and they receive another identical DOT. How much total damage will the enemy receive from the two DOTs?",
       "choices": [
         {
-    
+          "id": 1,
+          "label": "Each DOT ticks on its own, so (50 * 3) + (50 * 3) = 300 total damage"
+        },
+        {
+          "id": 2,
+          "label": "The second DOT cancels the first, so (50 * 1) + (50 * 3) = 200 damage"
+        },
+        {
+          "id": 3,
+          "label": "The second DOT absorbs the first and combines their damage, so (50 * 1) + (100 * 3) = 350 damage"
+        }
+      ],
+      "answer": 3,
+      "explanation": "Multiple instances of the same DOT have their damage combined which ticks over the duration of a single DOT. This can be exploited with a fast-firing gun like the Reegar to build DOTs that tick for huge amounts of damage quickly."
+    },
+    {
+      "id": 5,
+      "instructions": "On an assassination objective wave, if the first target is a difficult enemy, how can you force subsequent targets to be something easier to deal with?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "Shoot the target down as fast as possible"
+        },
+        {
+          "id": 2,
+          "label": "Finish the target off with a melee attack"
+        },
+        {
+          "id": 3,
+          "label": "Ragdoll the target off the map"
+        },
         {
           "id": 4,
-          "label": ""
+          "label": "Blow up the target and a lesser enemy at the same time with a cobra missle"
         }
       ],
       "answer": 4,
-      "explanation": ""
+      "explanation": "If for example the target is an Atlas and you use a cobra missle to blow it up along with an Assault Trooper, there is a high chance the next target will be an Assault Trooper due to how the wave enemy budget is calculated."
+    },
+    {
+      "id": 6,
+      "instructions": "What are the weak points on an Atlas?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "The shoulders, knees, groin, and canopy"
+        },
+        {
+          "id": 2,
+          "label": "The canopy and back vent"
+        },
+        {
+          "id": 3,
+          "label": "The shoulders, groin, canopy, and back vent"
+        },
+        {
+          "id": 4,
+          "label": "The shoulders, knees, groin, and back vent"
+        }
+      ],
+      "answer": 4,
+      "explanation": "Shooting the plates off of the shoulders, knees, and groin will stun the Atlas and deal extra damage, and shooting the back vent deals extra damage like a headshot. The canopy is not a weak point, although if using a weapon with enough penetration you may be able to score a double hit by shooting through the canopy from certain angles."
+    },
+    {
+      "id": 7,
+      "instructions": "What is a unique ability of chargeable weapons?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "They don't consume ammo"
+        },
+        {
+          "id": 2,
+          "label": "They ignore armor"
+        },
+        {
+          "id": 3,
+          "label": "They are 100% accurate when fully charged"
+        },
+        {
+          "id": 4,
+          "label": "They can be fired any time, even during other actions like sprinting"
+        }
+      ],
+      "answer": 4,
+      "explanation": "Once charged, weapons like the Arc Pistol can be fired any time even while sprinting, while stunned, while dodging, etc. This is also why a Geth Hunter can sometimes shoot you while stunned; its Geth Plasma Shotgun is chargeable."
+    },
+    {
+      "id": 8,
+      "instructions": "On wave 11, where should you hold while waiting for extraction?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "The extraction zone of course!"
+        },
+        {
+          "id": 2,
+          "label": "The middle of the map"
+        },
+        {
+          "id": 3,
+          "label": "Spread out to cover as much of the map as possible"
+        },
+        {
+          "id": 4,
+          "label": "Don't hold anywhere - instead kite the enemies around the map"
+        }
+      ],
+      "answer": 4,
+      "explanation": "Enemy spawns are unlimited on wave 11 so it's easy to get overwhelmed if you stay in one spot. Instead, kite the enemies around the map in a circle such that you arrive back at the extraction point shortly before extraction."
+    },
+    {
+      "id": 9,
+      "instructions": "What is a unique ability of projectile weapons (as opposed to normal \"hitscan\" weapons)?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "They don't consume ammo"
+        },
+        {
+          "id": 2,
+          "label": "They ignore armor"
+        },
+        {
+          "id": 3,
+          "label": "They are 100% accurate when fully charged"
+        },
+        {
+          "id": 4,
+          "label": "They can be fired any time, even during other actions like sprinting"
+        }
+      ],
+      "answer": 2,
+      "explanation": "Projectile weapons completely ignore any enemy armor damage reduction, making armor penetration mods on them unnecessary."
+    },
+    {
+      "id": 10,
+      "instructions": "Besides refilling all your ammo, what is an additional benefit of using a thermal clip pack?",
+      "choices": [
+        {
+          "id": 1,
+          "label": "It refills all your grenades"
+        },
+        {
+          "id": 2,
+          "label": "It grants all ammo powers (incendiary, disruptor, etc) for a few seconds"
+        },
+        {
+          "id": 3,
+          "label": "It refills all your cobra missles"
+        },
+        {
+          "id": 4,
+          "label": "It increases your weapon damage by 100% for a few seconds"
+        }
+      ],
+      "answer": 4,
+      "explanation": "A thermal pack will also increase weapon damage by 100% for a short time, in addition to refilling your weapon and spare ammo. It does refill grenades, but only up to 10."
     }
   ]
 }
